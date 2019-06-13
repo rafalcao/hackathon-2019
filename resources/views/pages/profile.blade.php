@@ -13,7 +13,7 @@
 @stop
 
 @section('content')
-<form method="POST" action="{{ route('register') }}">
+<form method="POST" action="{{ route('profile.save') }}">
     <div class="row clearfix profile-page">
         <div class="col-lg-12 col-md-12">
             <div class="card active-bg text-white">

@@ -111,7 +111,6 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('pages/teamsboard',            'PagesController@teamsboard')->name('pages.teamsboard');
     Route::get('pages/projects',              'PagesController@projects')->name('pages.projects');
     Route::get('pages/gallery',               'PagesController@gallery')->name('pages.gallery');
-    Route::get('pages/profile',               'ProfileController@edit')->name('pages.profile');
     Route::get('pages/timeline',              'PagesController@timeline')->name('pages.timeline');
     Route::get('pages/htimeline',             'PagesController@htimeline')->name('pages.htimeline');
     Route::get('pages/pricing',               'PagesController@pricing')->name('pages.pricing');
@@ -119,19 +118,22 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('pages/faqs',                  'PagesController@faqs')->name('pages.faqs');
     Route::get('pages/search',                'PagesController@search')->name('pages.search');
     Route::get('pages/helper',                'PagesController@helper')->name('pages.helper');
+
+    Route::get('pages/profile',               'ProfileController@edit')->name('pages.profile');
+    Route::post('profile/save',               'ProfileController@save')->name('profile.save');
 });
 
-Route::group(['middleware' => ['guest']], function () {
-    /* authentication */
-    Route::get('authentication', function ()       { return redirect('authentication/login'); });
-    Route::get('authentication/login',              'AuthenticationController@login')->name('authentication.login');
-    Route::get('authentication/register',           'AuthenticationController@register')->name('authentication.register');
-    Route::get('authentication/forgot-password',    'AuthenticationController@forgotPassword')->name('authentication.forgot-password');
-    Route::get('authentication/page404',            'AuthenticationController@page404')->name('authentication.page404');
-    Route::get('authentication/page403',            'AuthenticationController@page403')->name('authentication.page403');
-    Route::get('authentication/page500',            'AuthenticationController@page500')->name('authentication.page500');
-    Route::get('authentication/page503',            'AuthenticationController@page503')->name('authentication.page503');
-    Route::get('authentication/offline',            'AuthenticationController@offline')->name('authentication.offline');
-    Route::get('authentication/lockscreen',         'AuthenticationController@lockscreen')->name('authentication.lockscreen');
-    Route::post('/register', 'Auth\RegisterController@register')->name('register');
-});
+/* authentication */
+Route::get('authentication', function ()       { return redirect('authentication/login'); });
+Route::get('authentication/login',              'AuthenticationController@login')->name('authentication.login');
+Route::get('authentication/register',           'AuthenticationController@register')->name('authentication.register');
+Route::get('authentication/forgot-password',    'AuthenticationController@forgotPassword')->name('authentication.forgot-password');
+Route::get('authentication/page404',            'AuthenticationController@page404')->name('authentication.page404');
+Route::get('authentication/page403',            'AuthenticationController@page403')->name('authentication.page403');
+Route::get('authentication/page500',            'AuthenticationController@page500')->name('authentication.page500');
+Route::get('authentication/page503',            'AuthenticationController@page503')->name('authentication.page503');
+Route::get('authentication/offline',            'AuthenticationController@offline')->name('authentication.offline');
+Route::get('authentication/lockscreen',         'AuthenticationController@lockscreen')->name('authentication.lockscreen');
+Route::post('/register', 'Auth\RegisterController@register')->name('register');
+
+Route::get('/logout', 'AuthenticationController@logout')->name('logout');
