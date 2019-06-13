@@ -7,7 +7,7 @@
         <div class="col-lg-6 col-md-12">
             <div class="company_detail">
             <h4 class="logo"><img src="../assets/images/logo.png" alt="Logo"> Colabora</h4>
-                <h3>Bem Vindo a Colabora</h3>
+                <h3>Bem Vindo ao Colabora</h3>
                 <p>Desenvolvido para ajudar você.</p>
             </div>
         </div>                        
@@ -18,19 +18,17 @@
                 </div>
                 <form class="form">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="User Name">
+                        <input type="text" class="form-control" placeholder="E-mail">
                         <span class="input-group-addon"><i class="zmdi zmdi-account-circle"></i></span>
                     </div>
                     <div class="input-group">
-                        <input type="password" placeholder="Password" class="form-control" />
+                        <input type="password" placeholder="Senha" class="form-control" />
                         <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
                     </div>                            
                 </form>
                 <div class="footer">
-                    <a href="{{route('dashboard.index')}}" class="btn btn-primary btn-round btn-block">SIGN IN</a>
-                    <a href="{{route('authentication.register')}}" class="btn btn-primary btn-simple btn-round btn-block">SIGN UP</a>
+                    <a href="{{route('dashboard.index')}}" class="btn btn-primary btn-round btn-block">Entrar</a>
                 </div>
-                <a href="{{route('authentication.forgot-password')}}"class="link">Forgot Password?</a>
             </div>
         </div>
     </div>
