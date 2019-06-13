@@ -17,6 +17,9 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('dashboard', function ()       { return redirect('dashboard/index'); });
     Route::get('dashboard/index',             'DashboardController@index')->name('dashboard.index');
 
+    Route::get('projects', function ()       { return redirect('projects/index'); });
+    Route::get('projects/index',             'ProjectsController@index')->name('projects.index');
+
     /* App */
     Route::get('app', function ()       { return redirect('app/inbox'); });
     Route::get('app/inbox',                   'AppController@inbox')->name('app.inbox');

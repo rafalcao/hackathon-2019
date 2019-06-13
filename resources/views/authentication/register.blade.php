@@ -14,13 +14,12 @@
         <div class="col-lg-5 col-md-12 offset-lg-1">
             <div class="card-plain">
                 <div class="header">
-                    <h5>Sign Up</h5>
-                    <span>Register a new membership</span>
+                    <h5>Cadastro</h5>
                 </div>
                 <form method="POST" action="{{ route('register') }}">
                     @csrf                           
                     <div class="input-group">
-                        <input type="text" name="name" class="form-control" placeholder="Enter User Name">
+                        <input type="text" name="name" class="form-control" placeholder="Nome">
                         <span class="input-group-addon"><i class="zmdi zmdi-account-circle"></i></span>
                         @if ($errors->has('name'))
                             <span class="invalid-feedback d-block" role="alert">
@@ -29,7 +28,7 @@
                         @endif
                     </div>
                     <div class="input-group">
-                        <input type="text" name="email" class="form-control" placeholder="Enter Email">
+                        <input type="text" name="email" class="form-control" placeholder="E-mail">
                         <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
                         @if ($errors->has('email'))
                             <span class="invalid-feedback d-block" role="alert">
@@ -38,7 +37,7 @@
                         @endif
                     </div>
                     <div class="input-group">
-                        <input type="password" name="password" placeholder="Password" class="form-control" />
+                        <input type="password" name="password" placeholder="Senha" class="form-control" />
                         <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
                         @if ($errors->has('password'))
                             <span class="invalid-feedback d-block" role="alert">
@@ -46,16 +45,10 @@
                             </span>
                         @endif
                     </div>
-                    <div class="checkbox">
-                        <input id="terms" type="checkbox">
-                        <label for="terms">I read and Agree to the <a href="javascript:void(0);">Terms of Usage</a></label>
-                    </div>  
-                    <button type="submit" class="btn btn-primary">Registrar</button>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
                 </form>
-                <div class="footer">
-                    <a href="{{route('dashboard.index')}}" class="btn btn-primary btn-round btn-block">SIGN UP</a>
-                </div>
-                <a class="link" href="{{route('authentication.login')}}">You already have a membership?</a>
+                <br>
+                <a class="link" href="{{route('authentication.login')}}">Já possui cadastro?</a>
             </div>
         </div>
     </div>

@@ -70,7 +70,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="footer"> <a href="javascript:void(0);">Ver tudo</a> </li>
+                            <li class="footer"> <a href="javascript:void(0);">Ver todos</a> </li>
                         </ul>
                     </li>
                     <li class="dropdown task hidden-sm"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="icon-flag"></i>
@@ -122,7 +122,7 @@
                                     </li>                        
                                 </ul>
                             </li>
-                            <li class="footer"><a href="javascript:void(0);">View All</a></li>
+                            <li class="footer"><a href="javascript:void(0);">Ver todos</a></li>
                         </ul>
                     </li>
                     <!--li class="dropdown app_menu hidden-sm"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="icon-grid"></i></a>

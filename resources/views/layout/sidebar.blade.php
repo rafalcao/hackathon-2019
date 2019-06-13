@@ -5,7 +5,8 @@
                 <div class="menu">
                     <ul class="list">
                         <li class="header">MAIN</li>
-                        <li class="{{ Request::segment(2) === 'index' ? 'active open' : null }}"><a href="{{route('dashboard.index')}}"><i class="icon-speedometer"></i><span>Dashboard</span></a></li>
+                        <li class="{{ Request::segment(1) === 'dashboard' ? 'active open' : null }}"><a href="{{route('dashboard.index')}}"><i class="icon-speedometer"></i><span>Dashboard</span></a></li>
+                        <li class="{{ Request::segment(1) === 'projects' ? 'active open' : null }}"><a href="{{route('projects.index')}}"><i class="icon-rocket"></i><span>Projetos</span></a></li>
                         <li class="{{ Request::segment(1) === 'app' ? 'active open' : null }}">
                             <a href="javascript:void(0);" class="menu-toggle"><i class="icon-grid"></i><span>App</span></a>
                             <ul class="ml-menu">
