@@ -21,7 +21,3 @@ php artisan serve
 
 php artisan queue:work
 ```
-
-## Contact
-
-* [Discord](https://discord.gg/QFQdvy3)
