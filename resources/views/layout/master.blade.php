@@ -27,8 +27,10 @@
 
 <?php 
     $setting = !empty($_GET['theme']) ? $_GET['theme'] : '';
-    $theme = "theme-purple";
+    $theme = "theme-cyan";
     $menu = "";
+
+    /*
     if ($setting == 'p') {
         $theme = "theme-orange";
     } else if ($setting == 'b') {
@@ -41,15 +43,15 @@
         $theme = "theme-blush";
     } else {
             $theme = "theme-purple";
-    }
+    } */
 ?>
 
 <body class="<?= $theme ?>">
 <!-- Page Loader -->
-<div class="page-loader-wrapper">
+<div class="page-loader-wrapper" style="background: #49c5b682">
     <div class="loader">
-        <div class="m-t-30"><img class="zmdi-hc-spin" src="../assets/images/logo.svg" width="48" height="48" alt="InfiniO"></div>
-        <p>Please wait...</p>        
+        <div class="m-t-30"><img class="zmdi-hc-spin" src="../assets/images/logo.png" width="48" height="48" alt="InfiniO"></div>
+        <p>Aguarde...</p>
     </div>
 </div>
 <!-- Overlay For Sidebars -->
