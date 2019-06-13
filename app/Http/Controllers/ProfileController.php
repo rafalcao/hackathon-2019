@@ -12,4 +12,10 @@ class ProfileController extends Controller
             'dados' => auth()->user()
         ]);
     }
+
+    public function save(Request $request)
+    {
+        print_r($request);
+        return;
+    }
 }
