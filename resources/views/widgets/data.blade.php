@@ -22,6 +22,7 @@
 
 
 @section('content')
+
 <div class="row clearfix">
     <div class="col-lg-3 col-md-6 col-sm-12">
         <div class="card info-box-2">
@@ -31,7 +32,7 @@
                 </div>
                 <div class="content">
                     <div class="text">USAGE</div>
-                    <div class="number">98%</div>
+                    <div class="number">10%</div>
                 </div>
             </div>
         </div>
