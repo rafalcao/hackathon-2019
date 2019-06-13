@@ -110,7 +110,7 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('pages/teamsboard',            'PagesController@teamsboard')->name('pages.teamsboard');
     Route::get('pages/projects',              'PagesController@projects')->name('pages.projects');
     Route::get('pages/gallery',               'PagesController@gallery')->name('pages.gallery');
-    Route::get('pages/profile',               'PagesController@profile')->name('pages.profile');
+    Route::get('pages/profile',               'ProfileController@edit')->name('pages.profile');
     Route::get('pages/timeline',              'PagesController@timeline')->name('pages.timeline');
     Route::get('pages/htimeline',             'PagesController@htimeline')->name('pages.htimeline');
     Route::get('pages/pricing',               'PagesController@pricing')->name('pages.pricing');
