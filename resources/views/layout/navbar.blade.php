@@ -152,7 +152,7 @@
                             <li><a href="{{route('pages.profile')}}"><i class="icon-user m-r-10"></i> <span>Meus dados</span> <span class="badge badge-success float-right">80%</span></a></li>
                             <!--li><a href="javascript:void(0);"><i class="icon-notebook m-r-10"></i><span>Taskboard</span> <span class="badge badge-info float-right">New</span></a></li-->
                             <!--li><a href="{{route('authentication.lockscreen')}}"><i class="icon-lock m-r-10"></i><span>Locked</span></a></li-->
-                            <li><a href="{{route('authentication.login')}}"><i class="icon-power m-r-10"></i><span>Sair</span></a></li>
+                            <li><a href="{{route('authentication.logout')}}"><i class="icon-power m-r-10"></i><span>Sair</span></a></li>
                         </ul>
                     </li>
                     <!--li><a href="javascript:void(0);" class="js-right-sidebar"><i class="icon-equalizer"></i></a></li-->

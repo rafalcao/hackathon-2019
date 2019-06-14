@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -132,6 +133,7 @@ Route::group(['middleware' => ['auth']], function(){
 /* authentication */
 Route::get('authentication', function ()       { return redirect('authentication/login'); });
 Route::get('authentication/login',              'AuthenticationController@login')->name('authentication.login');
+Route::post('authentication/login',              'Auth\LoginController@login')->name('login');
 Route::get('authentication/register',           'AuthenticationController@register')->name('authentication.register');
 Route::get('authentication/forgot-password',    'AuthenticationController@forgotPassword')->name('authentication.forgot-password');
 Route::get('authentication/page404',            'AuthenticationController@page404')->name('authentication.page404');
@@ -142,4 +144,4 @@ Route::get('authentication/offline',            'AuthenticationController@offlin
 Route::get('authentication/lockscreen',         'AuthenticationController@lockscreen')->name('authentication.lockscreen');
 Route::post('/register', 'Auth\RegisterController@register')->name('register');
 
-Route::get('/logout', 'AuthenticationController@logout')->name('logout');
+Route::get('/logout', 'AuthenticationController@logout')->name('authentication.logout');
