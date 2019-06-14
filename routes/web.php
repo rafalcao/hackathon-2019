@@ -124,7 +124,7 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('pages/search',                'PagesController@search')->name('pages.search');
     Route::get('pages/helper',                'PagesController@helper')->name('pages.helper');
 
-    Route::get('pages/profile',               'ProfileController@edit')->name('pages.profile');
+    Route::get('profile/edit',               'ProfileController@edit')->name('pages.profile');
     Route::post('profile/save',               'ProfileController@save')->name('profile.save');
 });
 

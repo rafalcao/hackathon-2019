@@ -14,6 +14,7 @@
 
 @section('content')
 <form method="POST" action="{{ route('profile.save') }}">
+    @csrf
     <div class="row clearfix profile-page">
         <div class="col-lg-12 col-md-12">
             <div class="card active-bg text-white">
@@ -24,7 +25,7 @@
                             <h4><strong>{{$dados->name}}</strong></h4>
                             <span>{{$dados->role}}</span>
                         </div>
-                        <div id="m_area_chart"></div>
+                        <div style="height: 190px;"></div>
                     </div>
                 </div>
             </div>
@@ -130,7 +131,7 @@
         </div>
     </div>
     <div class="col-md-12">
-        <button class="btn btn-primary btn-round">Salvar Alterações</button>
+        <button type="submit" class="btn btn-primary btn-round">Salvar Alterações</button>
     </div>
 </form>
 @stop

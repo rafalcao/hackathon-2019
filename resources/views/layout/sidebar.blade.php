@@ -20,18 +20,7 @@
                                 <li class="{{ Request::segment(2) === 'taskboard' ? 'active' : null }}"><a href="{{route('app.taskboard')}}">Taskboard</a></li>
                             </ul>
                         </li>
-                        <li class="{{ Request::segment(1) === 'ecommerce' ? 'active open' : null }}">
-                            <a href="javascript:void(0);" class="menu-toggle"><i class="icon-basket-loaded"></i><span>Ecommerce</span></a>
-                            <ul class="ml-menu">
-                                <li class="{{ Request::segment(2) === 'dashboard' ? 'active' : null }}"><a href="{{route('ecommerce.dashboard')}}">Dashboard</a></li>
-                                <li class="{{ Request::segment(2) === 'product' ? 'active' : null }}"><a href="{{route('ecommerce.product')}}">Products</a></li>
-                                <li class="{{ Request::segment(2) === 'productdetail' ? 'active' : null }}"><a href="{{route('ecommerce.productdetail')}}">Products Detail</a></li>
-                                <li class="{{ Request::segment(2) === 'productlist' ? 'active' : null }}"><a href="{{route('ecommerce.productlist')}}">Products List</a></li>
-                                <li class="{{ Request::segment(2) === 'productorder' ? 'active' : null }}"><a href="{{route('ecommerce.productorder')}}">Orders</a></li>
-                                <li class="{{ Request::segment(2) === 'productcart' ? 'active' : null }}"><a href="{{route('ecommerce.productcart')}}">Cart</a></li>
-                                <li class="{{ Request::segment(2) === 'checkout' ? 'active' : null }}"><a href="{{route('ecommerce.checkout')}}">Checkout</a></li>
-                            </ul>
-                        </li>
+                        
                         <li class="{{ Request::segment(1) === 'ui' ? 'active open' : null }}">
                             <a href="javascript:void(0);" class="menu-toggle"><i class="icon-layers"></i><span>UI Elements</span></a>
                             <ul class="ml-menu">
