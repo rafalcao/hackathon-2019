@@ -29,7 +29,7 @@
                             <th>Projeto</th>
                             <th>Competências</th>
                             <th>Progresso</th>
-                            <th>Time</th>
+                            <th>Equipe</th>
                             <th>Status</th>
                             <th>Ação</th>
                         </tr>
@@ -537,6 +537,15 @@
     </div>
 </div>
 
+
+<style>
+    .btn-sm {
+        font-size: 12px !important;
+        padding: 4px 5px !important;
+    }
+</style>
+
+
 <div class="row clearfix">
     <div class="col-md-12 col-lg-12">
         <div class="card active-bg">
@@ -562,3 +571,5 @@
 <script src="{{ asset('assets/js/pages/index.js') }}"></script>
 <script src="{{ asset('assets/js/pages/widgets/infobox/infobox-1.js') }}"></script>
 @stop
+
+

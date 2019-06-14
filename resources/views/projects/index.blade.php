@@ -25,14 +25,18 @@
                         <table class="table m-b-0 table-hover">
                             <thead>
                             <tr>
-                                <th>Dono</th>
-                                <th>Projeto</th>
-                                <th>Competências</th>
-                                <th>Progresso</th>
-                                <th>Time</th>
-                                <th>Status</th>
-                                <th>Ação</th>
+                                <th style="border-bottom: 0px solid #dee2e6; border-top: 0px;"><a href="{{ route('projects.create') }}" class="btn btn-primary btn-lg bg-light-blue" style="float: right; margin-right: 20px; margin-top: 0px; margin-bottom: 10px;">Criar Projeto</a>
+                                </th>
                             </tr>
+                                <tr>
+                                    <th>Gerente</th>
+                                    <th>Projeto</th>
+                                    <th>Competências</th>
+                                    <th>Progresso</th>
+                                    <th>Equipe</th>
+                                    <th>Status</th>
+                                    <th>Ação</th>
+                                </tr>
                             </thead>
                             <tbody>
                             <tr>
@@ -65,7 +69,90 @@
                                     <span class="badge badge-success">Concluído</span>
                                 </td>
                                 <td class="project-actions">
-                                    <button class="btn btn-primary btn-lg btn-info">Colaborar!</button>
+                                    <a role="button" data-toggle="collapse" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                                    class="waves-effect collapsed">
+                                        <i class="material-icons" style="margin-left: 10px">keyboard_arrow_down</i>
+                                    </a>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="999">
+                                    <div style="display: flex; white-space: normal;">
+                                        <div class="collapse" id="collapseExample"  style="width: 37%; margin-right: 20px;">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                        </div>
+                                        <div class="collapse" id="collapseExample"  style="width: 60%">
+                                            <div class="table-responsive m-t-20">
+                                                <table class="table table-filter table-hover m-b-0">
+                                                    <tbody>
+                                                    <tr data-status="approved">
+                                                        <td>1</td>
+                                                        <td><div class="media-object"><img src="../assets/images/xs/avatar1.jpg" alt="" width="35px" class="rounded-circle"></div></td>
+                                                        <td>Rafael Falcão</td>
+                                                        <td>Desenvolvedor PHP</td>
+                                                        <td width="250px">
+                                                            <div class="progress-tempo">
+                                                                01/07/2019 a 29/07/2019
+                                                            </div>
+                                                            <div class="progress progress-xs">
+                                                                <div class="progress-bar l-green" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" style="width: 87%;"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge badge-success">Dentro do prazo</span></td>
+                                                    </tr>
+                                                    <tr data-status="suspended">
+                                                        <td>2</td>
+                                                        <td><div class="media-object"><img src="../assets/images/xs/avatar2.jpg" alt="" width="35px" class="rounded-circle"></div></td>
+                                                        <td>charlotte</td>
+                                                        <td>a.charlotte@gnail.com</td>
+                                                        <td>
+                                                            <div class="progress-tempo">
+                                                                01/07/2019 a 29/07/2019
+                                                            </div>
+                                                            <div class="progress progress-xs">
+                                                                <div class="progress-bar l-amber" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge badge-warning">Atenção</span></td>
+                                                    </tr>
+                                                    <tr data-status="blocked">
+                                                        <td>3</td>
+                                                        <td><div class="media-object"><img src="../assets/images/xs/avatar3.jpg" alt="" width="35px" class="rounded-circle"></div></td>
+                                                        <td>grayson</td>
+                                                        <td>grayson@yahoo.com</td>
+                                                        <td>
+                                                            <div class="progress-tempo">
+                                                                01/07/2019 a 29/07/2019
+                                                            </div>
+                                                            <div class="progress progress-xs">
+                                                                <div class="progress-bar l-coral" role="progressbar" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100" style="width: 16%;"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge badge-danger">Atrasado</span></td>
+                                                    </tr>
+                                                    <tr data-status="blocked">
+                                                        <td>3</td>
+                                                        <td><div class="material-icons" style="font-size: 35px;">account_circle</div></td>
+                                                        <td>Pendente</td>
+                                                        <td>Desenvolvedor React</td>
+                                                        <td>
+                                                            <div class="progress-tempo">
+                                                                01/07/2019 a 29/07/2019
+                                                            </div>
+                                                            <div class="progress progress-xs">
+                                                                <div class="progress-bar l-coral" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a href="{{ route('projects.edit') }}" class="btn btn-primary btn-md btn-info">Colaborar!</a>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -314,228 +401,7 @@
             </div>
         </div>
     </div>
-    <div class="row clearfix">
-        <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card info-box-2">
-                <div class="body">
-                    <div class="icon">
-                        <div class="chart chart-pie">30, 35, 25, 8</div>
-                    </div>
-                    <div class="content">
-                        <div class="text">USAGE</div>
-                        <div class="number"><span class="number count-to" data-from="0" data-to="9" data-speed="2000" data-fresh-interval="700">9</span>%</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card info-box-2">
-                <div class="body">
-                    <div class="icon">
-                        <div class="chart chart-bar">6,4,8,6,8,10,5,6,7,9,5</div>
-                    </div>
-                    <div class="content">
-                        <div class="text">IMPRESSIONS</div>
-                        <div class="number count-to" data-from="0" data-to="457512" data-speed="2000" data-fresh-interval="700">457512</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card info-box-2">
-                <div class="body">
-                    <div class="icon">
-                        <span class="chart chart-line">9,4,6,5,6,4,7,3</span>
-                    </div>
-                    <div class="content">
-                        <div class="text">TOTAL SALES</div>
-                        <div class="number">$<span class="number count-to" data-from="0" data-to="125543" data-speed="2000" data-fresh-interval="700">125543</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card info-box-2">
-                <div class="body">
-                    <div class="icon">
-                        <div class="chart chart-bar">4,6,-3,-1,2,-2,4,3,6,7,-2,3</div>
-                    </div>
-                    <div class="content">
-                        <div class="text">CURRENCY</div>
-                        <div class="number">$<span class="number count-to" data-from="0" data-to="1063" data-speed="2000" data-fresh-interval="700">1063</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row clearfix">
-        <div class="col-lg-12 col-md-12">
-            <div class="card user-account">
-                <div class="header">
-                    <h2><strong>Ranking</strong> de Colaboração</h2>
-                </div>
-                <div class="body">
-                    <div class="table-responsive">
-                        <table class="table m-b-0">
-                            <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Perfil</th>
-                                <th>Nome</th>
-                                <th style="text-align: center">Áreas</th>
-                                <th style="text-align: center">Semanas</th>
-                                <th style="text-align: center">Projetos</th>
-                                <th style="text-align: center">Ação</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td><img src="../assets/images/xs/avatar6.jpg" alt="" class="rounded"></td>
-                                <td>Evandro Gomes</td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Áreas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Semanas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Projetos</span>
-                                </td>
-                                <td >
-                                    <button class="btn btn-primary btn-simple" style="margin-left: 32%">Ver Perfil</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td><img src="../assets/images/xs/avatar6.jpg" alt="" class="rounded"></td>
-                                <td>Evandro Gomes</td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Áreas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Semanas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Projetos</span>
-                                </td>
-                                <td >
-                                    <button class="btn btn-primary btn-simple" style="margin-left: 32%">Ver Perfil</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td><img src="../assets/images/xs/avatar6.jpg" alt="" class="rounded"></td>
-                                <td>Evandro Gomes</td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Áreas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Semanas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Projetos</span>
-                                </td>
-                                <td >
-                                    <button class="btn btn-primary btn-simple" style="margin-left: 32%">Ver Perfil</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td><img src="../assets/images/xs/avatar6.jpg" alt="" class="rounded"></td>
-                                <td>Evandro Gomes</td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Áreas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Semanas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Projetos</span>
-                                </td>
-                                <td >
-                                    <button class="btn btn-primary btn-simple" style="margin-left: 32%">Ver Perfil</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td><img src="../assets/images/xs/avatar6.jpg" alt="" class="rounded"></td>
-                                <td>Evandro Gomes</td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Áreas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Semanas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Projetos</span>
-                                </td>
-                                <td >
-                                    <button class="btn btn-primary btn-simple" style="margin-left: 32%">Ver Perfil</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td><img src="../assets/images/xs/avatar6.jpg" alt="" class="rounded"></td>
-                                <td>Evandro Gomes</td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Áreas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Semanas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Projetos</span>
-                                </td>
-                                <td >
-                                    <button class="btn btn-primary btn-simple" style="margin-left: 32%">Ver Perfil</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td><img src="../assets/images/xs/avatar6.jpg" alt="" class="rounded"></td>
-                                <td>Evandro Gomes</td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Áreas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Semanas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Projetos</span>
-                                </td>
-                                <td >
-                                    <button class="btn btn-primary btn-simple" style="margin-left: 32%">Ver Perfil</button>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <div class="row clearfix">
         <div class="col-md-12 col-lg-12">
@@ -546,6 +412,19 @@
             </div>
         </div>
     </div>
+    <style>
+        .btn-sm {
+            font-size: 12px !important;
+            padding: 4px 5px !important;
+        }
+
+        .progress-tempo {
+            font-size: 14px;
+            font-family: Arial;
+            margin-left: 35px;
+        }
+    </style>
+
 @stop
 
 @section('page-styles')
@@ -562,3 +441,5 @@
     <script src="{{ asset('assets/js/pages/index.js') }}"></script>
     <script src="{{ asset('assets/js/pages/widgets/infobox/infobox-1.js') }}"></script>
 @stop
+
+
