@@ -27,7 +27,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="skill">Habilidades necessárias</label>
-                            <select name="skill" class="form-control" placeholder="Habilidades necessárias " multiple>
+                            <select name="skill[]" class="form-control" placeholder="Habilidades necessárias " multiple>
                                 <option value="php">PHP</option>
                                 <option value="js">JS</option>
                                 <option value="mysql">MYSQL</option>

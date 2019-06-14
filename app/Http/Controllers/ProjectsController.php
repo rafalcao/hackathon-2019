@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Projects;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 
@@ -20,8 +21,66 @@ class ProjectsController extends BaseController
         return view('project.edit', compact('project'));
     }
 
+    /**
+     * @param $request
+     */
+    protected function _saveProjects($request) {
+        $projects = new Projects;
+        $projects->id = null;
+        $projects->owner_user_id = 1;
+        $projects->zone_id = 1;
+        $projects->name = $request->projectname;
+        $projects->description = $request->description;
+        $projects->required_skills = serialize($request->skill);
+        $projects->save();
+
+        return $projects;
+
+    }
+
+    /**
+     * @param $request
+     */
+    protected function _savePhases($request) {
+        $phases = new Phases;
+        $phases->id = null;
+        $projects->owner_user_id = 1;
+        $projects->zone_id = 1;
+        $projects->name = $request->projectname;
+        $projects->description = $request->description;
+        $projects->required_skills = serialize($request->skill);
+        $projects->save();
+
+        return $projects;
+
+    }
+
+    /**
+     * @param $request
+     */
+    protected function _saveZone($request) {
+
+
+        $projects = new Projects;
+        $projects->id = null;
+        $projects->owner_user_id = 1;
+        $projects->zone_id = 1;
+        $projects->name = $request->projectname;
+        $projects->description = $request->description;
+        $projects->required_skills = serialize($request->skill);
+        $projects->save();
+
+        return $projects;
+
+    }
+
     public function store(Request $request) {
-        die('fdsnfsdfs');
+
+        $project = $this->_saveProjects($request);
+        $phases = $this->_savePhases($request, $project);
+        $this->_saveZone($request);
+
+
         return view('projects.create');
         /* $request->validate($this->validationRules());
         $earning = new Earning;
