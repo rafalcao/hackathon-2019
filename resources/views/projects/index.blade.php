@@ -22,21 +22,21 @@
             <div class="card">
                 <div class="body project_report">
                     <div class="table-responsive">
-                        <table class="table m-b-0 table-hover">
+                        <table id="project-table" class="table js-basic-example dataTable">
                             <thead>
                             <tr>
                                 <th style="border-bottom: 0px solid #dee2e6; border-top: 0px;"><a href="{{ route('projects.create') }}" class="btn btn-primary btn-lg bg-light-blue" style="float: right; margin-right: 20px; margin-top: 0px; margin-bottom: 10px;">Criar Projeto</a>
                                 </th>
                             </tr>
-                                <tr>
-                                    <th>Gerente</th>
-                                    <th>Projeto</th>
-                                    <th>Competências</th>
-                                    <th>Progresso</th>
-                                    <th>Equipe</th>
-                                    <th>Status</th>
-                                    <th>Ação</th>
-                                </tr>
+                            <tr>
+                                <th>Gerente</th>
+                                <th>Projeto</th>
+                                <th>Competências</th>
+                                <th>Progresso</th>
+                                <th>Equipe</th>
+                                <th>Status</th>
+                                <th>Ação</th>
+                            </tr>
                             </thead>
                             <tbody>
                             <tr>
@@ -47,7 +47,6 @@
                                 </td>
                                 <td class="project-title">
                                     <h6><a href="#">Geração de NFA-e</a></h6>
-                                    <small>13/06/2019 a 27/06/2019 (2 sem.)</small>
                                 </td>
                                 <td>
                                     <div class="btn btn-primary bg-blue-grey btn-sm">Gestão de projetos</div>
@@ -70,14 +69,14 @@
                                 </td>
                                 <td class="project-actions">
                                     <a role="button" data-toggle="collapse" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
-                                    class="waves-effect collapsed">
+                                       class="waves-effect collapsed">
                                         <i class="material-icons" style="margin-left: 10px">keyboard_arrow_down</i>
                                     </a>
                                 </td>
 
                             </tr>
                             <tr>
-                                <td colspan="999">
+                                <td colspan="999" class="td-w">
                                     <div style="display: flex; white-space: normal;">
                                         <div class="collapse" id="collapseExample"  style="width: 37%; margin-right: 20px;">
                                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
@@ -396,12 +395,10 @@
                             </tbody>
                         </table>
                     </div>
-                    <button class="btn btn-primary btn-simple center-align" style="margin-left:47%">Ver todos</button>
                 </div>
             </div>
         </div>
     </div>
-
 
     <div class="row clearfix">
         <div class="col-md-12 col-lg-12">
@@ -423,6 +420,14 @@
             font-family: Arial;
             margin-left: 35px;
         }
+
+        .td-w {
+            border-top: 0px !important;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: transparent !important;
+        }
     </style>
 
 @stop
@@ -430,16 +435,23 @@
 @section('page-styles')
     <link rel="stylesheet" href="{{ asset('assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/plugins/morrisjs/morris.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/plugins/jquery-datatable/dataTables.bootstrap4.min.css') }}">
 @stop
 
 @section('page-script')
+    <script src="{{ asset('assets/bundles/datatablescripts.bundle.js') }}"></script>
     <script src="{{ asset('assets/bundles/morrisscripts.bundle.js') }}"></script>
     <script src="{{ asset('assets/bundles/jvectormap.bundle.js') }}"></script>
+
     <script src="{{ asset('assets/bundles/knob.bundle.js') }}"></script>
 
     <script src="{{ asset('assets/bundles/mainscripts.bundle.js') }}"></script>
     <script src="{{ asset('assets/js/pages/index.js') }}"></script>
     <script src="{{ asset('assets/js/pages/widgets/infobox/infobox-1.js') }}"></script>
+    <script src="{{ asset('assets/js/pages/tables/jquery-datatable.js') }}"></script>
+
 @stop
+
+
 
 

@@ -309,7 +309,7 @@
                         </tbody>
                     </table>
                 </div>
-                <button class="btn btn-primary btn-simple center-align" style="margin-left:47%">Ver todos</button>
+                <a href="{{ route('projects.index') }}" class="btn btn-primary btn-simple center-align" style="margin-left:47%">Ver todos</a>
             </div>
         </div>
     </div>
