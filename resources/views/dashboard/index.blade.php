@@ -537,6 +537,15 @@
     </div>
 </div>
 
+
+<style>
+    .btn-sm {
+        font-size: 12px !important;
+        padding: 4px 5px !important;
+    }
+</style>
+
+
 <div class="row clearfix">
     <div class="col-md-12 col-lg-12">
         <div class="card active-bg">
@@ -564,10 +573,3 @@
 @stop
 
 
-
-<style>
-    .btn-sm {
-        font-size: 12px !important;
-        padding: 4px 5px !important;
-    }
-</style>

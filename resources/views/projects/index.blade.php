@@ -24,16 +24,19 @@
                     <div class="table-responsive">
                         <table class="table m-b-0 table-hover">
                             <thead>
-                            <a href="{{ route('projects.create') }}" class="btn btn-primary btn-lg bg-light-blue" style="float: right; margin-right: 20px; margin-top: 0px; margin-bottom: 10px;">Criar Projeto</button>
                             <tr>
-                                <th>Dono</th>
-                                <th>Projeto</th>
-                                <th>Competências</th>
-                                <th>Progresso</th>
-                                <th>Equipe</th>
-                                <th>Status</th>
-                                <th>Ação</th>
+                                <th style="border-bottom: 0px solid #dee2e6; border-top: 0px;"><a href="{{ route('projects.create') }}" class="btn btn-primary btn-lg bg-light-blue" style="float: right; margin-right: 20px; margin-top: 0px; margin-bottom: 10px;">Criar Projeto</a>
+                                </th>
                             </tr>
+                                <tr>
+                                    <th>Gerente</th>
+                                    <th>Projeto</th>
+                                    <th>Competências</th>
+                                    <th>Progresso</th>
+                                    <th>Equipe</th>
+                                    <th>Status</th>
+                                    <th>Ação</th>
+                                </tr>
                             </thead>
                             <tbody>
                             <tr>
@@ -142,7 +145,7 @@
                                                             </div>
                                                         </td>
                                                         <td class="project-actions">
-                                                            <a href="{{ route('projects.edit') }}" class="btn btn-primary btn-md btn-info">Colaborar!</button>
+                                                            <a href="{{ route('projects.edit') }}" class="btn btn-primary btn-md btn-info">Colaborar!</a>
                                                         </td>
                                                     </tr>
                                                     </tbody>
@@ -398,228 +401,7 @@
             </div>
         </div>
     </div>
-    <div class="row clearfix">
-        <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card info-box-2">
-                <div class="body">
-                    <div class="icon">
-                        <div class="chart chart-pie">30, 35, 25, 8</div>
-                    </div>
-                    <div class="content">
-                        <div class="text">USAGE</div>
-                        <div class="number"><span class="number count-to" data-from="0" data-to="9" data-speed="2000" data-fresh-interval="700">9</span>%</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card info-box-2">
-                <div class="body">
-                    <div class="icon">
-                        <div class="chart chart-bar">6,4,8,6,8,10,5,6,7,9,5</div>
-                    </div>
-                    <div class="content">
-                        <div class="text">IMPRESSIONS</div>
-                        <div class="number count-to" data-from="0" data-to="457512" data-speed="2000" data-fresh-interval="700">457512</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card info-box-2">
-                <div class="body">
-                    <div class="icon">
-                        <span class="chart chart-line">9,4,6,5,6,4,7,3</span>
-                    </div>
-                    <div class="content">
-                        <div class="text">TOTAL SALES</div>
-                        <div class="number">$<span class="number count-to" data-from="0" data-to="125543" data-speed="2000" data-fresh-interval="700">125543</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card info-box-2">
-                <div class="body">
-                    <div class="icon">
-                        <div class="chart chart-bar">4,6,-3,-1,2,-2,4,3,6,7,-2,3</div>
-                    </div>
-                    <div class="content">
-                        <div class="text">CURRENCY</div>
-                        <div class="number">$<span class="number count-to" data-from="0" data-to="1063" data-speed="2000" data-fresh-interval="700">1063</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row clearfix">
-        <div class="col-lg-12 col-md-12">
-            <div class="card user-account">
-                <div class="header">
-                    <h2><strong>Ranking</strong> de Colaboração</h2>
-                </div>
-                <div class="body">
-                    <div class="table-responsive">
-                        <table class="table m-b-0">
-                            <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Perfil</th>
-                                <th>Nome</th>
-                                <th style="text-align: center">Áreas</th>
-                                <th style="text-align: center">Semanas</th>
-                                <th style="text-align: center">Projetos</th>
-                                <th style="text-align: center">Ação</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td><img src="../assets/images/xs/avatar6.jpg" alt="" class="rounded"></td>
-                                <td>Evandro Gomes</td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Áreas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Semanas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Projetos</span>
-                                </td>
-                                <td >
-                                    <button class="btn btn-primary btn-simple" style="margin-left: 32%">Ver Perfil</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td><img src="../assets/images/xs/avatar6.jpg" alt="" class="rounded"></td>
-                                <td>Evandro Gomes</td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Áreas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Semanas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Projetos</span>
-                                </td>
-                                <td >
-                                    <button class="btn btn-primary btn-simple" style="margin-left: 32%">Ver Perfil</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td><img src="../assets/images/xs/avatar6.jpg" alt="" class="rounded"></td>
-                                <td>Evandro Gomes</td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Áreas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Semanas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Projetos</span>
-                                </td>
-                                <td >
-                                    <button class="btn btn-primary btn-simple" style="margin-left: 32%">Ver Perfil</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td><img src="../assets/images/xs/avatar6.jpg" alt="" class="rounded"></td>
-                                <td>Evandro Gomes</td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Áreas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Semanas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Projetos</span>
-                                </td>
-                                <td >
-                                    <button class="btn btn-primary btn-simple" style="margin-left: 32%">Ver Perfil</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td><img src="../assets/images/xs/avatar6.jpg" alt="" class="rounded"></td>
-                                <td>Evandro Gomes</td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Áreas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Semanas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Projetos</span>
-                                </td>
-                                <td >
-                                    <button class="btn btn-primary btn-simple" style="margin-left: 32%">Ver Perfil</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td><img src="../assets/images/xs/avatar6.jpg" alt="" class="rounded"></td>
-                                <td>Evandro Gomes</td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Áreas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Semanas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Projetos</span>
-                                </td>
-                                <td >
-                                    <button class="btn btn-primary btn-simple" style="margin-left: 32%">Ver Perfil</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td><img src="../assets/images/xs/avatar6.jpg" alt="" class="rounded"></td>
-                                <td>Evandro Gomes</td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Áreas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Semanas</span>
-                                </td>
-                                <td style="text-align: center">
-                                    <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
-                                    <span>Projetos</span>
-                                </td>
-                                <td >
-                                    <button class="btn btn-primary btn-simple" style="margin-left: 32%">Ver Perfil</button>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <div class="row clearfix">
         <div class="col-md-12 col-lg-12">
@@ -630,6 +412,19 @@
             </div>
         </div>
     </div>
+    <style>
+        .btn-sm {
+            font-size: 12px !important;
+            padding: 4px 5px !important;
+        }
+
+        .progress-tempo {
+            font-size: 14px;
+            font-family: Arial;
+            margin-left: 35px;
+        }
+    </style>
+
 @stop
 
 @section('page-styles')
@@ -648,15 +443,3 @@
 @stop
 
 
-<style>
-    .btn-sm {
-        font-size: 12px !important;
-        padding: 4px 5px !important;
-    }
-
-    .progress-tempo {
-        font-size: 14px;
-        font-family: Arial;
-        margin-left: 35px;
-    }
-</style>
