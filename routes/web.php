@@ -21,6 +21,7 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('projects/index',              'ProjectsController@index')->name('projects.index');
     Route::get('projects/create',             'ProjectsController@create')->name('projects.create');
     Route::get('projects/edit',             'ProjectsController@edit')->name('projects.edit');
+    Route::post('projects/store',             'ProjectsController@store')->name('projects.save');
 
     /* App */
     Route::get('app', function ()       { return redirect('app/inbox'); });
@@ -124,7 +125,7 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('pages/search',                'PagesController@search')->name('pages.search');
     Route::get('pages/helper',                'PagesController@helper')->name('pages.helper');
 
-    Route::get('pages/profile',               'ProfileController@edit')->name('pages.profile');
+    Route::get('profile/edit',               'ProfileController@edit')->name('pages.profile');
     Route::post('profile/save',               'ProfileController@save')->name('profile.save');
 });
 

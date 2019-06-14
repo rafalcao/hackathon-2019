@@ -8,14 +8,24 @@ class ProfileController extends Controller
 {
     public function edit()
     {
+        $users = \App\Users::find(auth()->user()->id);
         return view('pages.profile',[
-            'dados' => auth()->user()
+            'dados' => $users
         ]);
     }
 
     public function save(Request $request)
     {
-        print_r($request);
-        return;
+        $users = \App\Users::find(auth()->user()->id);
+
+        foreach ($request->all() as $key=>$value) {
+            if ($key == '_token') {
+                continue;
+            }
+            $users->$key = $value;
+        }
+        $users->save();
+
+        return $this->edit();
     }
 }
