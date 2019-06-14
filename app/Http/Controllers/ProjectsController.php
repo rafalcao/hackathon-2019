@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 
 class ProjectsController extends BaseController
@@ -20,6 +21,8 @@ class ProjectsController extends BaseController
     }
 
     public function store(Request $request) {
+        die('fdsnfsdfs');
+        return view('projects.create');
         /* $request->validate($this->validationRules());
         $earning = new Earning;
         if(!empty(session('space'))){
