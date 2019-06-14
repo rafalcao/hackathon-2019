@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Routing\Controller as BaseController;
+use Auth;
+use Session;
 
 class AuthenticationController extends BaseController
 {
@@ -10,6 +12,13 @@ class AuthenticationController extends BaseController
         return view('authentication.login');
     }
     
+    public function logout()
+    {
+        Auth::logout();
+        Session::flush();
+        return redirect('/');
+    }
+
     public function register(){
         return view('authentication.register');
     }    

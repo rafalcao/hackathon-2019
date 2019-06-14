@@ -1,6 +1,5 @@
 @extends('layout.authentication')
 @section('title', 'Login')
-
 @section('content')
 <div class="col-md-12 content-center">
     <div class="row clearfix">
@@ -16,19 +15,18 @@
                 <div class="header">
                     <h5>Log in</h5>
                 </div>
-                <form class="form">
+                <form class="form" action="{{ route('login') }}" method="POST">
+                @csrf
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="E-mail">
+                        <input type="text" name="email" class="form-control" placeholder="E-mail">
                         <span class="input-group-addon"><i class="zmdi zmdi-account-circle"></i></span>
                     </div>
                     <div class="input-group">
-                        <input type="password" placeholder="Senha" class="form-control" />
+                        <input type="password" name="password" placeholder="Senha" class="form-control" />
                         <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
-                    </div>                            
+                    </div>
+                    <button type="submit" class="btn btn-primary">Entrar</button>                            
                 </form>
-                <div class="footer">
-                    <a href="{{route('dashboard.index')}}" class="btn btn-primary btn-round btn-block">Entrar</a>
-                </div>
             </div>
         </div>
     </div>
