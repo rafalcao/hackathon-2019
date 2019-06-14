@@ -21,6 +21,7 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('projects/index',              'ProjectsController@index')->name('projects.index');
     Route::get('projects/create',             'ProjectsController@create')->name('projects.create');
     Route::get('projects/edit',             'ProjectsController@edit')->name('projects.edit');
+    Route::post('projects/store',             'ProjectsController@store')->name('projects.save');
 
     /* App */
     Route::get('app', function ()       { return redirect('app/inbox'); });
