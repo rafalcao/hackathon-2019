@@ -29,7 +29,7 @@
                             <th>Projeto</th>
                             <th>Competências</th>
                             <th>Progresso</th>
-                            <th>Time</th>
+                            <th>Equipe</th>
                             <th>Status</th>
                             <th>Ação</th>
                         </tr>
@@ -562,3 +562,12 @@
 <script src="{{ asset('assets/js/pages/index.js') }}"></script>
 <script src="{{ asset('assets/js/pages/widgets/infobox/infobox-1.js') }}"></script>
 @stop
+
+
+
+<style>
+    .btn-sm {
+        font-size: 12px !important;
+        padding: 4px 5px !important;
+    }
+</style>

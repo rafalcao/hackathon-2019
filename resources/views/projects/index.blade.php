@@ -24,12 +24,13 @@
                     <div class="table-responsive">
                         <table class="table m-b-0 table-hover">
                             <thead>
+                            <a href="{{ route('projects.create') }}" class="btn btn-primary btn-lg bg-light-blue" style="float: right; margin-right: 20px; margin-top: 0px; margin-bottom: 10px;">Criar Projeto</button>
                             <tr>
                                 <th>Dono</th>
                                 <th>Projeto</th>
                                 <th>Competências</th>
                                 <th>Progresso</th>
-                                <th>Time</th>
+                                <th>Equipe</th>
                                 <th>Status</th>
                                 <th>Ação</th>
                             </tr>
@@ -65,7 +66,90 @@
                                     <span class="badge badge-success">Concluído</span>
                                 </td>
                                 <td class="project-actions">
-                                    <button class="btn btn-primary btn-lg btn-info">Colaborar!</button>
+                                    <a role="button" data-toggle="collapse" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                                    class="waves-effect collapsed">
+                                        <i class="material-icons" style="margin-left: 10px">keyboard_arrow_down</i>
+                                    </a>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="999">
+                                    <div style="display: flex; white-space: normal;">
+                                        <div class="collapse" id="collapseExample"  style="width: 37%; margin-right: 20px;">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                        </div>
+                                        <div class="collapse" id="collapseExample"  style="width: 60%">
+                                            <div class="table-responsive m-t-20">
+                                                <table class="table table-filter table-hover m-b-0">
+                                                    <tbody>
+                                                    <tr data-status="approved">
+                                                        <td>1</td>
+                                                        <td><div class="media-object"><img src="../assets/images/xs/avatar1.jpg" alt="" width="35px" class="rounded-circle"></div></td>
+                                                        <td>Rafael Falcão</td>
+                                                        <td>Desenvolvedor PHP</td>
+                                                        <td width="250px">
+                                                            <div class="progress-tempo">
+                                                                01/07/2019 a 29/07/2019
+                                                            </div>
+                                                            <div class="progress progress-xs">
+                                                                <div class="progress-bar l-green" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" style="width: 87%;"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge badge-success">Dentro do prazo</span></td>
+                                                    </tr>
+                                                    <tr data-status="suspended">
+                                                        <td>2</td>
+                                                        <td><div class="media-object"><img src="../assets/images/xs/avatar2.jpg" alt="" width="35px" class="rounded-circle"></div></td>
+                                                        <td>charlotte</td>
+                                                        <td>a.charlotte@gnail.com</td>
+                                                        <td>
+                                                            <div class="progress-tempo">
+                                                                01/07/2019 a 29/07/2019
+                                                            </div>
+                                                            <div class="progress progress-xs">
+                                                                <div class="progress-bar l-amber" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge badge-warning">Atenção</span></td>
+                                                    </tr>
+                                                    <tr data-status="blocked">
+                                                        <td>3</td>
+                                                        <td><div class="media-object"><img src="../assets/images/xs/avatar3.jpg" alt="" width="35px" class="rounded-circle"></div></td>
+                                                        <td>grayson</td>
+                                                        <td>grayson@yahoo.com</td>
+                                                        <td>
+                                                            <div class="progress-tempo">
+                                                                01/07/2019 a 29/07/2019
+                                                            </div>
+                                                            <div class="progress progress-xs">
+                                                                <div class="progress-bar l-coral" role="progressbar" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100" style="width: 16%;"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge badge-danger">Atrasado</span></td>
+                                                    </tr>
+                                                    <tr data-status="blocked">
+                                                        <td>3</td>
+                                                        <td><div class="material-icons" style="font-size: 35px;">account_circle</div></td>
+                                                        <td>Pendente</td>
+                                                        <td>Desenvolvedor React</td>
+                                                        <td>
+                                                            <div class="progress-tempo">
+                                                                01/07/2019 a 29/07/2019
+                                                            </div>
+                                                            <div class="progress progress-xs">
+                                                                <div class="progress-bar l-coral" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a href="{{ route('projects.edit') }}" class="btn btn-primary btn-md btn-info">Colaborar!</button>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -562,3 +646,17 @@
     <script src="{{ asset('assets/js/pages/index.js') }}"></script>
     <script src="{{ asset('assets/js/pages/widgets/infobox/infobox-1.js') }}"></script>
 @stop
+
+
+<style>
+    .btn-sm {
+        font-size: 12px !important;
+        padding: 4px 5px !important;
+    }
+
+    .progress-tempo {
+        font-size: 14px;
+        font-family: Arial;
+        margin-left: 35px;
+    }
+</style>
